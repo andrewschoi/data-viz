@@ -1,0 +1,58 @@
+[
+  {
+    "case_type":"Non-payment of Rent",
+    "count":33807
+  },
+  {
+    "case_type":"No Cause",
+    "count":8656
+  },
+  {
+    "case_type":"Cause",
+    "count":8314
+  },
+  {
+    "case_type":"Foreclosure",
+    "count":801
+  },
+  {
+    "case_type":"SP Transfer- No Cause",
+    "count":526
+  },
+  {
+    "case_type":"Temporary Restraining Order",
+    "count":20
+  },
+  {
+    "case_type":"Efiled Civil Complaint",
+    "count":7
+  },
+  {
+    "case_type":"Efiled Civil Case Filed by City\/Town",
+    "count":6
+  },
+  {
+    "case_type":"Small Claim $501-$2000",
+    "count":2
+  },
+  {
+    "case_type":"Civil Case Transfer",
+    "count":2
+  },
+  {
+    "case_type":"Small Claim $2001-$5000",
+    "count":2
+  },
+  {
+    "case_type":"Efiled Temporary Restraining Order",
+    "count":1
+  },
+  {
+    "case_type":"Civil Case Filed by City \/ Town",
+    "count":1
+  },
+  {
+    "case_type":"Small Claim over $5000",
+    "count":1
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "neighborhood": "Charlestown",
+    "investor_share": 0.1295,
+    "cash_share": 0.1684,
+    "median_price": 840000,
+    "total_sales": 1954
+  },
+  {
+    "neighborhood": "Jamaica Plain",
+    "investor_share": 0.1481,
+    "cash_share": 0.1885,
+    "median_price": 693000,
+    "total_sales": 2472
+  },
+  {
+    "neighborhood": "West Roxbury",
+    "investor_share": 0.1525,
+    "cash_share": 0.2159,
+    "median_price": 634500,
+    "total_sales": 1862
+  },
+  {
+    "neighborhood": "Roslindale",
+    "investor_share": 0.1648,
+    "cash_share": 0.1613,
+    "median_price": 590000,
+    "total_sales": 1723
+  },
+  {
+    "neighborhood": "South End",
+    "investor_share": 0.1981,
+    "cash_share": 0.2628,
+    "median_price": 1000000,
+    "total_sales": 2009
+  },
+  {
+    "neighborhood": "Hyde Park",
+    "investor_share": 0.2127,
+    "cash_share": 0.1707,
+    "median_price": 512000,
+    "total_sales": 1359
+  },
+  {
+    "neighborhood": "South Boston Waterfront",
+    "investor_share": 0.2241,
+    "cash_share": 0.3563,
+    "median_price": 1215400,
+    "total_sales": 348
+  },
+  {
+    "neighborhood": "South Boston",
+    "investor_share": 0.2496,
+    "cash_share": 0.1805,
+    "median_price": 785000,
+    "total_sales": 3806
+  },
+  {
+    "neighborhood": "Chinatown",
+    "investor_share": 0.2662,
+    "cash_share": 0.4473,
+    "median_price": 1050000,
+    "total_sales": 541
+  },
+  {
+    "neighborhood": "Beacon Hill",
+    "investor_share": 0.2806,
+    "cash_share": 0.4155,
+    "median_price": 869500,
+    "total_sales": 1372
+  },
+  {
+    "neighborhood": "Downtown",
+    "investor_share": 0.2894,
+    "cash_share": 0.3872,
+    "median_price": 915000,
+    "total_sales": 1268
+  },
+  {
+    "neighborhood": "Mattapan",
+    "investor_share": 0.2901,
+    "cash_share": 0.2076,
+    "median_price": 501000,
+    "total_sales": 655
+  },
+  {
+    "neighborhood": "Brighton",
+    "investor_share": 0.2907,
+    "cash_share": 0.3307,
+    "median_price": 525000,
+    "total_sales": 1775
+  },
+  {
+    "neighborhood": "Dorchester",
+    "investor_share": 0.3111,
+    "cash_share": 0.1904,
+    "median_price": 610000,
+    "total_sales": 5256
+  },
+  {
+    "neighborhood": "Back Bay",
+    "investor_share": 0.3236,
+    "cash_share": 0.4022,
+    "median_price": 1300000,
+    "total_sales": 2265
+  },
+  {
+    "neighborhood": "East Boston",
+    "investor_share": 0.4029,
+    "cash_share": 0.1672,
+    "median_price": 670000,
+    "total_sales": 1884
+  },
+  {
+    "neighborhood": "Allston",
+    "investor_share": 0.4078,
+    "cash_share": 0.3932,
+    "median_price": 560000,
+    "total_sales": 618
+  },
+  {
+    "neighborhood": "Longwood",
+    "investor_share": 0.4202,
+    "cash_share": 0.4686,
+    "median_price": 925500,
+    "total_sales": 1052
+  },
+  {
+    "neighborhood": "Roxbury",
+    "investor_share": 0.4558,
+    "cash_share": 0.2752,
+    "median_price": 629325,
+    "total_sales": 803
+  },
+  {
+    "neighborhood": "Mission Hill",
+    "investor_share": 0.5,
+    "cash_share": 0.2817,
+    "median_price": 855500,
+    "total_sales": 252
+  }
+]

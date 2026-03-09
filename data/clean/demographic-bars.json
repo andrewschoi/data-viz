@@ -1,0 +1,90 @@
+[
+  {
+    "category": "income",
+    "group": "Q1 (Lowest)",
+    "investor_share": 0.2295,
+    "total_investor": 10517,
+    "total_sales": 47973,
+    "median_income": 53692
+  },
+  {
+    "category": "income",
+    "group": "Q2",
+    "investor_share": 0.1622,
+    "total_investor": 14393,
+    "total_sales": 91519,
+    "median_income": 80974
+  },
+  {
+    "category": "income",
+    "group": "Q3",
+    "investor_share": 0.1348,
+    "total_investor": 12264,
+    "total_sales": 94416,
+    "median_income": 104176
+  },
+  {
+    "category": "income",
+    "group": "Q4",
+    "investor_share": 0.1237,
+    "total_investor": 11587,
+    "total_sales": 96835,
+    "median_income": 127519
+  },
+  {
+    "category": "income",
+    "group": "Q5 (Highest)",
+    "investor_share": 0.1089,
+    "total_investor": 13057,
+    "total_sales": 116439,
+    "median_income": 168125
+  },
+  {
+    "category": "race",
+    "group": "Majority Asian",
+    "investor_share": 0.153,
+    "total_investor": 135,
+    "total_sales": 833,
+    "n_tracts": 3
+  },
+  {
+    "category": "race",
+    "group": "Majority Black",
+    "investor_share": 0.3064,
+    "total_investor": 1678,
+    "total_sales": 5873,
+    "n_tracts": 19
+  },
+  {
+    "category": "race",
+    "group": "Majority Hispanic/Latino",
+    "investor_share": 0.2604,
+    "total_investor": 2460,
+    "total_sales": 9442,
+    "n_tracts": 27
+  },
+  {
+    "category": "race",
+    "group": "Majority White",
+    "investor_share": 0.1274,
+    "total_investor": 47032,
+    "total_sales": 377411,
+    "n_tracts": 600
+  },
+  {
+    "category": "race",
+    "group": "No Majority",
+    "investor_share": 0.2119,
+    "total_investor": 10511,
+    "total_sales": 53629,
+    "n_tracts": 150
+  },
+  {
+    "category": "race",
+    "group": "Unknown",
+    "investor_share": 0.0833,
+    "total_investor": 2,
+    "total_sales": 13,
+    "n_tracts": 3
+  }
+]

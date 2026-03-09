@@ -1,0 +1,122 @@
+[
+  {
+    "neighborhood": "Dorchester",
+    "n_flips": 3672,
+    "median_profit": 73000,
+    "median_profit_pct": 28.88
+  },
+  {
+    "neighborhood": "South Boston",
+    "n_flips": 1318,
+    "median_profit": 55000,
+    "median_profit_pct": 15.41
+  },
+  {
+    "neighborhood": "Back Bay",
+    "n_flips": 1146,
+    "median_profit": 70750,
+    "median_profit_pct": 11.43
+  },
+  {
+    "neighborhood": "East Boston",
+    "n_flips": 919,
+    "median_profit": 74000,
+    "median_profit_pct": 27.1
+  },
+  {
+    "neighborhood": "South End",
+    "n_flips": 841,
+    "median_profit": 62350,
+    "median_profit_pct": 11.96
+  },
+  {
+    "neighborhood": "Hyde Park",
+    "n_flips": 811,
+    "median_profit": 81000,
+    "median_profit_pct": 35.72
+  },
+  {
+    "neighborhood": "Jamaica Plain",
+    "n_flips": 804,
+    "median_profit": 42250,
+    "median_profit_pct": 13.02
+  },
+  {
+    "neighborhood": "Brighton",
+    "n_flips": 779,
+    "median_profit": 40000,
+    "median_profit_pct": 15.51
+  },
+  {
+    "neighborhood": "West Roxbury",
+    "n_flips": 770,
+    "median_profit": 79500,
+    "median_profit_pct": 22.63
+  },
+  {
+    "neighborhood": "Charlestown",
+    "n_flips": 738,
+    "median_profit": 55000,
+    "median_profit_pct": 11.88
+  },
+  {
+    "neighborhood": "Roslindale",
+    "n_flips": 690,
+    "median_profit": 65000,
+    "median_profit_pct": 22.43
+  },
+  {
+    "neighborhood": "Beacon Hill",
+    "n_flips": 603,
+    "median_profit": 60000,
+    "median_profit_pct": 12.44
+  },
+  {
+    "neighborhood": "Mattapan",
+    "n_flips": 575,
+    "median_profit": 85000,
+    "median_profit_pct": 35.42
+  },
+  {
+    "neighborhood": "Roxbury",
+    "n_flips": 526,
+    "median_profit": 80000,
+    "median_profit_pct": 33.03
+  },
+  {
+    "neighborhood": "Longwood",
+    "n_flips": 522,
+    "median_profit": 57000,
+    "median_profit_pct": 14.68
+  },
+  {
+    "neighborhood": "Downtown",
+    "n_flips": 508,
+    "median_profit": 62375,
+    "median_profit_pct": 12.14
+  },
+  {
+    "neighborhood": "Allston",
+    "n_flips": 348,
+    "median_profit": 43000,
+    "median_profit_pct": 15.59
+  },
+  {
+    "neighborhood": "Chinatown",
+    "n_flips": 282,
+    "median_profit": 49750,
+    "median_profit_pct": 8.67
+  },
+  {
+    "neighborhood": "Mission Hill",
+    "n_flips": 154,
+    "median_profit": 75750,
+    "median_profit_pct": 17.09
+  },
+  {
+    "neighborhood": "South Boston Waterfront",
+    "n_flips": 141,
+    "median_profit": 56000,
+    "median_profit_pct": 9.93
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "neighborhood": "Dorchester",
+    "eviction_count": 2035,
+    "corp_own_rate": 0.19,
+    "own_occ_rate": 0.48,
+    "estimated_corp_evictions": 387.0,
+    "estimated_individual_evictions": 1648.0
+  },
+  {
+    "neighborhood": "Roxbury",
+    "eviction_count": 553,
+    "corp_own_rate": 0.25,
+    "own_occ_rate": 0.32,
+    "estimated_corp_evictions": 138.0,
+    "estimated_individual_evictions": 415.0
+  },
+  {
+    "neighborhood": "Hyde Park",
+    "eviction_count": 488,
+    "corp_own_rate": 0.12,
+    "own_occ_rate": 0.63,
+    "estimated_corp_evictions": 59.0,
+    "estimated_individual_evictions": 429.0
+  },
+  {
+    "neighborhood": "Mattapan",
+    "eviction_count": 466,
+    "corp_own_rate": 0.14,
+    "own_occ_rate": 0.55,
+    "estimated_corp_evictions": 65.0,
+    "estimated_individual_evictions": 401.0
+  },
+  {
+    "neighborhood": "South End",
+    "eviction_count": 433,
+    "corp_own_rate": 0.25,
+    "own_occ_rate": 0.36,
+    "estimated_corp_evictions": 108.0,
+    "estimated_individual_evictions": 325.0
+  },
+  {
+    "neighborhood": "East Boston",
+    "eviction_count": 318,
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.41,
+    "estimated_corp_evictions": 95.0,
+    "estimated_individual_evictions": 223.0
+  },
+  {
+    "neighborhood": "Jamaica Plain",
+    "eviction_count": 296,
+    "corp_own_rate": 0.17,
+    "own_occ_rate": 0.52,
+    "estimated_corp_evictions": 50.0,
+    "estimated_individual_evictions": 246.0
+  },
+  {
+    "neighborhood": "Brighton",
+    "eviction_count": 257,
+    "corp_own_rate": 0.23,
+    "own_occ_rate": 0.32,
+    "estimated_corp_evictions": 59.0,
+    "estimated_individual_evictions": 198.0
+  },
+  {
+    "neighborhood": "Downtown",
+    "eviction_count": 215,
+    "corp_own_rate": 0.34,
+    "own_occ_rate": 0.3,
+    "estimated_corp_evictions": 73.0,
+    "estimated_individual_evictions": 142.0
+  },
+  {
+    "neighborhood": "Allston",
+    "eviction_count": 202,
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.22,
+    "estimated_corp_evictions": 61.0,
+    "estimated_individual_evictions": 141.0
+  },
+  {
+    "neighborhood": "Beacon Hill",
+    "eviction_count": 168,
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.29,
+    "estimated_corp_evictions": 50.0,
+    "estimated_individual_evictions": 118.0
+  },
+  {
+    "neighborhood": "Longwood",
+    "eviction_count": 143,
+    "corp_own_rate": 0.34,
+    "own_occ_rate": 0.18,
+    "estimated_corp_evictions": 49.0,
+    "estimated_individual_evictions": 94.0
+  },
+  {
+    "neighborhood": "South Boston",
+    "eviction_count": 141,
+    "corp_own_rate": 0.22,
+    "own_occ_rate": 0.38,
+    "estimated_corp_evictions": 31.0,
+    "estimated_individual_evictions": 110.0
+  },
+  {
+    "neighborhood": "Roslindale",
+    "eviction_count": 116,
+    "corp_own_rate": 0.14,
+    "own_occ_rate": 0.63,
+    "estimated_corp_evictions": 16.0,
+    "estimated_individual_evictions": 100.0
+  },
+  {
+    "neighborhood": "South Boston Waterfront",
+    "eviction_count": 113,
+    "corp_own_rate": 0.38,
+    "own_occ_rate": 0.29,
+    "estimated_corp_evictions": 43.0,
+    "estimated_individual_evictions": 70.0
+  },
+  {
+    "neighborhood": "West Roxbury",
+    "eviction_count": 92,
+    "corp_own_rate": 0.13,
+    "own_occ_rate": 0.66,
+    "estimated_corp_evictions": 12.0,
+    "estimated_individual_evictions": 80.0
+  },
+  {
+    "neighborhood": "Charlestown",
+    "eviction_count": 73,
+    "corp_own_rate": 0.28,
+    "own_occ_rate": 0.49,
+    "estimated_corp_evictions": 20.0,
+    "estimated_individual_evictions": 53.0
+  },
+  {
+    "neighborhood": "Chinatown",
+    "eviction_count": 67,
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.28,
+    "estimated_corp_evictions": 20.0,
+    "estimated_individual_evictions": 47.0
+  }
+]

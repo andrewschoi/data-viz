@@ -1,0 +1,58 @@
+[
+  {
+    "id": "transfer_fee",
+    "title": "Real Estate Transfer Fee",
+    "status": "Proposed",
+    "description": "Allow municipalities to impose a fee on real estate transactions over $1M, with revenue funding affordable housing",
+    "relevance_renter": "Funds new affordable housing construction and preservation",
+    "relevance_owner": "May slightly increase transaction costs for high-value properties",
+    "data_context": {
+      "pct_sales_over_1m": 0.2773,
+      "estimated_revenue": null
+    }
+  },
+  {
+    "id": "right_first_refusal",
+    "title": "Tenant Right of First Refusal",
+    "status": "Proposed",
+    "description": "Give tenants the right to purchase their building before it can be sold to an investor",
+    "relevance_renter": "Could prevent displacement when buildings are sold to investors",
+    "relevance_owner": "Restricts seller flexibility but promotes stable communities",
+    "data_context": {
+      "investor_purchases_per_year": 1821
+    }
+  },
+  {
+    "id": "just_cause_eviction",
+    "title": "Just Cause Eviction",
+    "status": "Proposed",
+    "description": "Require landlords to have a valid reason for eviction, preventing no-fault evictions",
+    "relevance_renter": "Directly protects against 'no cause' evictions which account for significant filings",
+    "relevance_owner": "N/A for owner-occupants; landlord-owners face new restrictions",
+    "data_context": {
+      "no_cause_evictions_pct": 0.166
+    }
+  },
+  {
+    "id": "condo_conversion_notice",
+    "title": "Condo Conversion Notification",
+    "status": "Existing (Boston)",
+    "description": "Requires advance notice to tenants before condo conversion and relocation assistance",
+    "relevance_renter": "Provides time and resources to find new housing",
+    "relevance_owner": "Existing homeowners unaffected; prospective condo buyers see more supply",
+    "data_context": {
+      "annual_conversions_boston": 249
+    }
+  },
+  {
+    "id": "corporate_transparency",
+    "title": "Corporate Ownership Transparency",
+    "status": "Proposed (Federal)",
+    "description": "Require disclosure of beneficial owners of LLCs purchasing residential property",
+    "relevance_renter": "Helps identify serial bad-actor landlords",
+    "relevance_owner": "Increases market transparency for all buyers",
+    "data_context": {
+      "llc_purchase_share": 0.1479
+    }
+  }
+]

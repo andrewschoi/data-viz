@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Homeowners — How Investors Affect Your Housing</title>
+  <meta name="description" content="A personalized data story about how real estate investors affect your housing situation in the Boston metro area.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- D3.js v7 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Live Region for screen reader announcements -->
+  <div aria-live="polite" aria-atomic="true" class="sr-only" id="data-announce"></div>
+
+  <!-- Sticky Demographic Bar (hidden until form submit) -->
+  <header class="demo-bar" id="demo-bar" hidden>
+    <div class="demo-bar__inner">
+      <span class="demo-bar__item" id="demo-bar-income"></span>
+      <span class="demo-bar__separator">|</span>
+      <span class="demo-bar__item" id="demo-bar-race"></span>
+      <span class="demo-bar__separator">|</span>
+      <span class="demo-bar__item" id="demo-bar-status"></span>
+      <span class="demo-bar__separator">|</span>
+      <span class="demo-bar__item" id="demo-bar-neighborhood"></span>
+      <button class="demo-bar__edit" id="demo-bar-edit" aria-label="Edit your selections">Edit</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ====== SCREEN 1: LANDING ====== -->
+    <section class="screen screen--landing" id="screen-landing" aria-labelledby="screen-1-title">
+      <div class="screen__inner screen__inner--narrow">
+        <h1 class="landing__headline" id="screen-1-title">Hello, Homeowner.</h1>
+        <p class="landing__subhead">Let's look at what's happening in your housing market.</p>
+        <p class="landing__hook">Over the past two decades, investors have bought 1 in 5 homes sold in Greater Boston. How does that affect you? It depends on who you are and where you live. Tell us a little about yourself, and we'll show you your data.</p>
+
+        <form class="landing__form" id="personalization-form" novalidate>
+          <div class="form-group">
+            <label for="input-income" class="form-label">What's your household income?</label>
+            <select id="input-income" class="form-select" required>
+              <option value="" disabled selected>Select income bracket</option>
+            </select>
+            <p class="form-helper">We use income brackets to show how housing affordability and investor competition affect different economic groups.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="input-race" class="form-label">How do you identify?</label>
+            <select id="input-race" class="form-select" required>
+              <option value="" disabled selected>Select race/ethnicity</option>
+            </select>
+            <p class="form-helper">We ask about race because investor activity impacts racial groups differently — from eviction rates to homeownership access. We'll show you the data.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Do you rent or own?</label>
+            <div class="toggle-group" role="radiogroup" aria-label="Housing status">
+              <button type="button" class="toggle-btn toggle-btn--active" data-value="renter" role="radio" aria-checked="true">Renter</button>
+              <button type="button" class="toggle-btn" data-value="owner" role="radio" aria-checked="false">Owner/Prospective Buyer</button>
+            </div>
+            <p class="form-helper">Your housing status determines which advice track we show you — renters and owners face very different challenges from investor activity.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="input-neighborhood" class="form-label">Where do you live?</label>
+            <select id="input-neighborhood" class="form-select" required>
+              <option value="" disabled selected>Select neighborhood</option>
+            </select>
+            <p class="form-helper">Your neighborhood determines which local data we highlight. All data stays in your browser — we don't store anything.</p>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">Show me my data</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 2: BIG PICTURE ====== -->
+    <section class="screen screen--hero" id="screen-big-picture" aria-labelledby="screen-2-title">
+      <div class="screen__inner screen__inner--narrow">
+        <h2 class="screen__title" id="screen-2-title">Here's what's happening around you.</h2>
+
+        <figure class="chart-container chart-container--hero" id="hero-stat-container">
+          <div class="hero-stat" id="hero-stat-viz" role="img" aria-label="1 in 5 homes sold in Greater Boston went to an investor" aria-describedby="hero-stat-desc">
+          </div>
+          <p class="sr-only" id="hero-stat-desc"></p>
+          <figcaption class="chart-source">Source: MAPC "Homes for Profit," transaction data 2004-2018</figcaption>
+        </figure>
+
+        <div class="callout callout--you" id="hero-personalized" hidden>
+        </div>
+
+        <p class="scroll-indicator">Scroll to explore</p>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 3: INVESTOR MAP ====== -->
+    <section class="screen screen--scrolly" id="screen-investor-map" aria-labelledby="screen-3-title">
+      <div class="scrolly">
+        <div class="scrolly__text">
+          <div class="scrolly__step" data-step="map-intro">
+            <h2 class="screen__title" id="screen-3-title">Where investors are buying — and where they're not.</h2>
+            <p class="screen__body">Investor activity isn't spread evenly across Greater Boston. It concentrates in neighborhoods with lower home prices, more renters, and larger communities of color. The darker the area on the map, the higher the share of homes purchased by investors.</p>
+          </div>
+
+          <div class="scrolly__step" data-step="map-toggle">
+            <div class="toggle-group toggle-group--compact" role="radiogroup" aria-label="Investor type filter">
+              <button type="button" class="toggle-btn toggle-btn--active" data-value="all" role="radio" aria-checked="true">All investors</button>
+              <button type="button" class="toggle-btn" data-value="institutional" role="radio" aria-checked="false">Institutional</button>
+              <button type="button" class="toggle-btn" data-value="large" role="radio" aria-checked="false">Large</button>
+              <button type="button" class="toggle-btn" data-value="small" role="radio" aria-checked="false">Small</button>
+            </div>
+          </div>
+
+          <div class="scrolly__step" data-step="map-you">
+            <div class="callout callout--you" id="map-personalized">
+              <p><strong>Your neighborhood: <span id="map-user-neighborhood"></span></strong></p>
+              <p id="map-user-stats"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly__graphic">
+          <figure class="chart-container" id="choropleth-container">
+            <svg id="choropleth-viz" role="img" aria-label="Map of Boston metro area showing investor ownership concentration by neighborhood" aria-describedby="choropleth-desc"></svg>
+            <p class="sr-only" id="choropleth-desc"></p>
+            <div class="chart-legend" id="choropleth-legend"></div>
+            <figcaption class="chart-source">Source: MAPC Homes for Profit, 2004-2018 transaction data</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 4: TIMELINE ====== -->
+    <section class="screen screen--scrolly" id="screen-timeline" aria-labelledby="screen-4-title">
+      <div class="scrolly">
+        <div class="scrolly__text">
+          <div class="scrolly__step" data-step="timeline-intro">
+            <h2 class="screen__title" id="screen-4-title">It wasn't always this way.</h2>
+            <p class="screen__body">Investor purchases in Greater Boston have risen steadily since 2004 — with sharp jumps after the 2008 financial crisis and the post-COVID real estate boom. In your neighborhood, the trend looks like this:</p>
+          </div>
+
+          <div class="scrolly__step" data-step="timeline-2008">
+            <div class="annotation-card">
+              <p class="annotation-card__year">2008 — Financial Crisis</p>
+              <p>The foreclosure wave created a buying opportunity. Institutional investors purchased distressed properties at steep discounts, converting owner-occupied homes into rentals.</p>
+            </div>
+          </div>
+
+          <div class="scrolly__step" data-step="timeline-2014">
+            <div class="annotation-card">
+              <p class="annotation-card__year">2012-2014 — Post-Crisis Surge</p>
+              <p>Wall Street-backed firms began systematically buying single-family homes as an asset class.</p>
+            </div>
+          </div>
+
+          <div class="scrolly__step" data-step="timeline-2020">
+            <div class="annotation-card">
+              <p class="annotation-card__year">2020-2021 — COVID-Era Boom</p>
+              <p>Remote work drove suburban demand. Cash-rich investors capitalized on low interest rates and competed aggressively with first-time buyers.</p>
+            </div>
+          </div>
+
+          <div class="scrolly__step" data-step="timeline-you">
+            <div class="callout callout--you" id="timeline-personalized">
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly__graphic">
+          <figure class="chart-container" id="timeline-container">
+            <svg id="timeline-viz" role="img" aria-label="Line chart showing corporate ownership rate over time in Boston neighborhoods" aria-describedby="timeline-desc"></svg>
+            <p class="sr-only" id="timeline-desc"></p>
+            <figcaption class="chart-source">Source: MAPC corporate ownership tracking, 2004-2024</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 5: WHO GETS HURT ====== -->
+    <section class="screen screen--scrolly" id="screen-who-gets-hurt" aria-labelledby="screen-5-title">
+      <div class="scrolly">
+        <div class="scrolly__text">
+          <div class="scrolly__step" data-step="hurt-intro">
+            <h2 class="screen__title" id="screen-5-title">Who gets hurt the most?</h2>
+            <p class="screen__body">Investor activity doesn't affect everyone equally. The data shows clear patterns along lines of income and race. Lower-income households and communities of color bear a disproportionate burden — from higher eviction rates to steeper price competition.</p>
+          </div>
+
+          <div class="scrolly__step" data-step="hurt-bars">
+            <p class="screen__body">Each bar shows the investor purchase share for one demographic group. Your group is highlighted.</p>
+          </div>
+
+          <div class="scrolly__step" data-step="hurt-dots">
+            <p class="screen__body">Each dot represents a census tract's eviction filing rate. The spread shows how much variation exists — averages don't tell the whole story.</p>
+          </div>
+
+          <div class="scrolly__step" data-step="hurt-you">
+            <div class="callout callout--you" id="hurt-personalized">
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly__graphic">
+          <figure class="chart-container" id="demographic-bars-container">
+            <svg id="demographic-bars-viz" role="img" aria-label="Grouped bar chart showing investor purchase share by income bracket and race" aria-describedby="demographic-bars-desc"></svg>
+            <p class="sr-only" id="demographic-bars-desc"></p>
+            <figcaption class="chart-source">Source: MAPC aggregated sales with census demographics</figcaption>
+          </figure>
+          <figure class="chart-container" id="eviction-dots-container">
+            <svg id="eviction-dots-viz" role="img" aria-label="Dot plot showing eviction filing rates by census tract" aria-describedby="eviction-dots-desc"></svg>
+            <p class="sr-only" id="eviction-dots-desc"></p>
+            <figcaption class="chart-source">Source: Boston Housing Court filings, 2020-2022</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 6: THINGS YOU SHOULD KNOW ====== -->
+    <section class="screen screen--full" id="screen-things-to-know" aria-labelledby="screen-6-title">
+      <div class="screen__inner">
+        <h2 class="screen__title screen__title--centered" id="screen-6-title">Things you should know.</h2>
+        <p class="screen__subtitle screen__subtitle--centered" id="screen-6-subtitle"></p>
+
+        <!-- Track Toggle -->
+        <div class="track-toggle-wrapper">
+          <div class="track-toggle" role="radiogroup" aria-label="Advice track">
+            <button type="button" class="track-toggle__btn track-toggle__btn--renter" data-track="renter" role="radio" aria-checked="true">Renter</button>
+            <button type="button" class="track-toggle__btn track-toggle__btn--owner" data-track="owner" role="radio" aria-checked="false">Owner/Buyer</button>
+          </div>
+        </div>
+
+        <!-- Renter Track -->
+        <div class="track track--renter" id="track-renter">
+          <!-- 6A: Who's your landlord -->
+          <div class="track__section">
+            <h3 class="track__heading">Who owns your building?</h3>
+            <p class="track__body" id="landlord-body">In your neighborhood, the rental property landscape looks like this:</p>
+            <figure class="chart-container" id="landlord-donut-container">
+              <svg id="landlord-donut-viz" role="img" aria-label="Donut chart showing breakdown of property owner types" aria-describedby="landlord-donut-desc"></svg>
+              <p class="sr-only" id="landlord-donut-desc"></p>
+              <figcaption class="chart-source">Source: MAPC sales transaction categorization</figcaption>
+            </figure>
+          </div>
+
+          <!-- 6B: Eviction risk by landlord type -->
+          <div class="track__section">
+            <h3 class="track__heading">Your eviction risk depends on who owns the building.</h3>
+            <p class="track__body">In Boston, corporate landlords file evictions significantly more often than small landlords. That's not because their tenants are worse — research shows the difference is driven by ownership structure, not tenant behavior.</p>
+            <figure class="chart-container" id="eviction-by-owner-container">
+              <svg id="eviction-by-owner-viz" role="img" aria-label="Horizontal bar chart comparing eviction counts by neighborhood" aria-describedby="eviction-by-owner-desc"></svg>
+              <p class="sr-only" id="eviction-by-owner-desc"></p>
+              <figcaption class="chart-source">Source: Boston Housing Court filings, 2020-2022; corporate ownership data from MAPC</figcaption>
+            </figure>
+          </div>
+
+          <!-- 6C: Your rights -->
+          <div class="track__section">
+            <h3 class="track__heading">Know your rights.</h3>
+            <div class="rights-list">
+              <div class="card">
+                <h4 class="card__title">Security deposit</h4>
+                <p class="card__body">Landlord must hold in interest-bearing account; limited to first month, last month, security deposit, and lock change fee.</p>
+              </div>
+              <div class="card">
+                <h4 class="card__title">Retaliation protection</h4>
+                <p class="card__body">Landlord cannot evict you for reporting code violations or organizing with other tenants.</p>
+              </div>
+              <div class="card">
+                <h4 class="card__title">Habitability</h4>
+                <p class="card__body">Landlord must maintain the property to state Sanitary Code standards.</p>
+              </div>
+              <div class="card">
+                <h4 class="card__title">Condo conversion</h4>
+                <p class="card__body">If your building is being converted, you have a right of first refusal to purchase your unit and extended notice periods.</p>
+              </div>
+            </div>
+            <div class="callout callout--info">
+              <p><strong>If you need help now:</strong> Contact City Life / Vida Urbana (clvu.org) or Greater Boston Legal Services (gbls.org).</p>
+            </div>
+          </div>
+
+          <!-- 6D: Best value neighborhoods -->
+          <div class="track__section">
+            <h3 class="track__heading">Where the better deals are.</h3>
+            <p class="track__body" id="neighborhood-value-body"></p>
+            <figure class="chart-container" id="neighborhood-value-container">
+              <svg id="neighborhood-value-viz" role="img" aria-label="Strip plot showing neighborhood investment and pricing comparison" aria-describedby="neighborhood-value-desc"></svg>
+              <p class="sr-only" id="neighborhood-value-desc"></p>
+              <figcaption class="chart-source">Source: MAPC sales data; Census rent and income data</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Owner Track -->
+        <div class="track track--owner" id="track-owner" hidden>
+          <!-- 6E: Price-to-income -->
+          <div class="track__section">
+            <h3 class="track__heading">The price-to-income reality.</h3>
+            <p class="track__body" id="price-income-body"></p>
+            <figure class="chart-container" id="price-income-container">
+              <svg id="price-income-viz" role="img" aria-label="Gauge chart showing home price to income ratio by income bracket" aria-describedby="price-income-desc"></svg>
+              <p class="sr-only" id="price-income-desc"></p>
+              <figcaption class="chart-source">Source: MAPC sales data; Census income data</figcaption>
+            </figure>
+          </div>
+
+          <!-- 6F: Cash buyer competition -->
+          <div class="track__section">
+            <h3 class="track__heading">You're competing with cash.</h3>
+            <p class="track__body">Sales involving no mortgage financing — often investors — make up a significant share of transactions. When an investor pays cash, they can close faster and waive financing contingencies.</p>
+            <figure class="chart-container" id="cash-buyer-container">
+              <svg id="cash-buyer-viz" role="img" aria-label="Stacked bar chart showing proportion of cash versus financed home sales over time" aria-describedby="cash-buyer-desc"></svg>
+              <p class="sr-only" id="cash-buyer-desc"></p>
+              <figcaption class="chart-source">Source: MAPC sales data, 2000-2020. Cash sales identified as transactions with no recorded mortgage.</figcaption>
+            </figure>
+          </div>
+
+          <!-- 6G: Rent vs buy -->
+          <div class="track__section">
+            <h3 class="track__heading">The rent-vs-buy math in your neighborhood.</h3>
+            <p class="track__body" id="breakeven-body"></p>
+            <figure class="chart-container" id="breakeven-container">
+              <svg id="breakeven-viz" role="img" aria-label="Interactive line chart showing rent versus buy breakeven analysis" aria-describedby="breakeven-desc"></svg>
+              <p class="sr-only" id="breakeven-desc"></p>
+              <div class="slider-controls" id="breakeven-sliders"></div>
+              <figcaption class="chart-source">Source: MAPC sales and Census rent data; breakeven model assumptions</figcaption>
+            </figure>
+          </div>
+
+          <!-- 6H: Where to look -->
+          <div class="track__section">
+            <h3 class="track__heading">Lower-competition neighborhoods in your price range.</h3>
+            <p class="track__body" id="competition-body"></p>
+            <figure class="chart-container" id="investor-competition-container">
+              <svg id="investor-competition-viz" role="img" aria-label="Ranked bar chart of neighborhoods with lowest investor competition" aria-describedby="investor-competition-desc"></svg>
+              <p class="sr-only" id="investor-competition-desc"></p>
+              <figcaption class="chart-source">Source: MAPC investor activity data by neighborhood</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 7: THE OTHER SIDE ====== -->
+    <section class="screen screen--scrolly" id="screen-other-side" aria-labelledby="screen-7-title">
+      <div class="scrolly">
+        <div class="scrolly__text">
+          <div class="scrolly__step" data-step="other-intro">
+            <h2 class="screen__title" id="screen-7-title">The other side of the story.</h2>
+            <p class="screen__body">We've shown you how investors can hurt. But intellectual honesty requires showing the full picture. In some cases, investor activity has positive effects: property improvements, added housing supply, and market liquidity after the 2008 crisis.</p>
+            <p class="screen__body">The question isn't "are investors good or bad?" — it's <strong>who benefits and who pays the cost</strong>.</p>
+          </div>
+
+          <div class="scrolly__step" data-step="other-chart">
+            <div class="callout callout--positive">
+              <p>Each pair of dots shows how neighborhoods changed as corporate ownership rates shifted. Lines sloping up indicate increased owner-occupancy decline.</p>
+            </div>
+          </div>
+
+          <div class="scrolly__step" data-step="other-you">
+            <div class="callout callout--you" id="other-personalized">
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly__graphic">
+          <figure class="chart-container" id="comparison-container">
+            <svg id="comparison-viz" role="img" aria-label="Slope chart comparing neighborhood outcomes before and after investor activity changes" aria-describedby="comparison-desc"></svg>
+            <p class="sr-only" id="comparison-desc"></p>
+            <figcaption class="chart-source">Source: MAPC corporate ownership and occupancy data, 2004 vs 2024</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 8: POLICY & ACTION ====== -->
+    <section class="screen screen--full" id="screen-policy" aria-labelledby="screen-8-title">
+      <div class="screen__inner">
+        <h2 class="screen__title screen__title--centered" id="screen-8-title">What's being done — and what it means for you.</h2>
+        <p class="screen__body screen__body--centered">Massachusetts is debating some of the most significant housing reforms in decades. We've ranked these by how much they'd affect someone in your situation.</p>
+
+        <div class="policy-sort-bar" id="policy-sort-bar">
+          <label for="policy-sort" class="form-label form-label--inline">Sort by:</label>
+          <select id="policy-sort" class="form-select form-select--compact">
+            <option value="relevance">Relevance to you</option>
+            <option value="status">Status</option>
+          </select>
+        </div>
+
+        <div class="policy-grid" id="policy-cards-container" role="list" aria-label="Housing policy proposals">
+        </div>
+
+        <div class="callout callout--warning">
+          <p><strong>A note on honesty:</strong> We can't predict exactly what would happen if these policies pass. No one can. But we can share what the evidence from other cities suggests. We've tried to present both the benefits and the trade-offs. This is a data-informed overview, not legal advice.</p>
+        </div>
+
+        <div class="cta-section">
+          <h3 class="cta-section__title">Make your voice heard.</h3>
+          <div class="cta-section__links">
+            <a href="https://malegislature.gov" class="btn btn--primary" target="_blank" rel="noopener">Find your state representative</a>
+            <a href="https://www.clvu.org" class="btn btn--secondary" target="_blank" rel="noopener">City Life / Vida Urbana</a>
+            <a href="https://www.vote.org" class="btn btn--secondary" target="_blank" rel="noopener">Register to vote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SCREEN 9: CLOSING ====== -->
+    <section class="screen screen--closing" id="screen-closing" aria-labelledby="screen-9-title">
+      <div class="screen__inner screen__inner--narrow">
+        <h2 class="screen__title screen__title--centered" id="screen-9-title">Your housing story, in three numbers.</h2>
+
+        <div class="insight-cards" id="closing-insights">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div class="closing-body">
+          <p>Housing is personal. The same trend — investor activity in Greater Boston — means very different things depending on who you are and where you live. We built this tool so you could see <strong>your</strong> story in the data.</p>
+          <p>The data doesn't have all the answers. But it's a start. And now you know more about your housing market than most people ever will.</p>
+        </div>
+
+        <div class="closing-actions">
+          <button class="btn btn--primary" id="share-btn">Share your results</button>
+          <a href="#screen-things-to-know" class="btn btn--secondary">Explore more</a>
+          <a href="https://www.clvu.org" class="btn btn--secondary" target="_blank" rel="noopener">Take action</a>
+        </div>
+
+        <footer class="closing-footer">
+          <p>Built with data from MAPC "Homes for Profit," the Warren Group, Boston Housing Court, U.S. Census Bureau, and MassGIS.</p>
+          <p>A project for DS 4200 — Information Visualization, Spring 2026.</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- App Entry Point -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

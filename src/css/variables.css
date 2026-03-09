@@ -1,0 +1,286 @@
+/*
+ * Hello Homeowners — Design Tokens
+ * =================================
+ * This file is the SINGLE SOURCE OF TRUTH for all design tokens.
+ * All other stylesheets must @import this file.
+ * No hardcoded color, font-size, spacing, or animation values elsewhere.
+ *
+ * Token naming: --{category}-{name}
+ * Categories: color, font, space, width, transition, radius, shadow
+ *
+ * Dark mode: OUT OF SCOPE. Light mode only.
+ */
+
+/* ========================
+   FONTS (Google Fonts)
+   ========================
+   Import in <head>:
+   https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap
+*/
+
+:root {
+  /* ----- Font Families ----- */
+  --font-family-headline: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-family-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Courier New", monospace;
+
+  /* ----- Font Sizes (Desktop) ----- */
+  --font-size-hero: 72px;
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-body: 18px;
+  --font-size-body-sm: 16px;
+  --font-size-caption: 14px;
+  --font-size-label: 12px;
+  --font-size-overline: 12px;
+
+  /* ----- Font Weights ----- */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ----- Line Heights ----- */
+  --line-height-hero: 1.1;
+  --line-height-h1: 1.15;
+  --line-height-h2: 1.25;
+  --line-height-h3: 1.3;
+  --line-height-h4: 1.35;
+  --line-height-body: 1.6;
+  --line-height-body-sm: 1.5;
+  --line-height-caption: 1.4;
+  --line-height-label: 1.3;
+  --line-height-overline: 1.2;
+
+  /* ----- Letter Spacing ----- */
+  --letter-spacing-hero: -0.02em;
+  --letter-spacing-h1: -0.01em;
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-caption: 0.01em;
+  --letter-spacing-label: 0.02em;
+  --letter-spacing-overline: 0.08em;
+
+  /* ========================
+     COLORS
+     ======================== */
+
+  /* ----- Sequential Scale (Choropleth: Investor Concentration) ----- */
+  /* 7 bins, cream to crimson. Colorblind-safe. */
+  --color-seq-1: #FFF8E7; /* Lowest */
+  --color-seq-2: #FEDCAC;
+  --color-seq-3: #FDB97A;
+  --color-seq-4: #F59245;
+  --color-seq-5: #E06D2E;
+  --color-seq-6: #C0392B;
+  --color-seq-7: #8B1A1A; /* Highest */
+
+  /* ----- Categorical Palette (Demographics) ----- */
+  --color-cat-1: #5B8DB8; /* White */
+  --color-cat-2: #D4845A; /* Black */
+  --color-cat-3: #7BAE7F; /* Hispanic/Latino */
+  --color-cat-4: #9B7BB8; /* Asian */
+  --color-cat-5: #C9A84C; /* Other/Multiracial */
+  --color-cat-6: #CC7B7B; /* Extended */
+  --color-cat-7: #6B9B9B; /* Extended */
+
+  /* Darker text-safe variants for categories with low contrast */
+  --color-cat-3-text: #4A7A4E;
+  --color-cat-5-text: #8B7533;
+
+  /* ----- "YOU" Highlight ----- */
+  --color-you: #0077B6;
+  --color-you-light: #90E0EF;
+  --color-you-dark: #023E8A;
+
+  /* ----- Neutral Palette ----- */
+  --color-neutral-50: #FAF8F5;   /* Page background */
+  --color-neutral-100: #F0EDE8;  /* Card/section backgrounds */
+  --color-neutral-200: #E0DCD6;  /* Borders, dividers */
+  --color-neutral-300: #C5C0B8;  /* Grid lines, disabled */
+  --color-neutral-400: #9E9890;  /* Placeholder text */
+  --color-neutral-500: #787068;  /* Captions, sources */
+  --color-neutral-600: #5C554D;  /* Secondary body text */
+  --color-neutral-700: #403A33;  /* Primary body text */
+  --color-neutral-800: #2A2520;  /* Headlines */
+  --color-neutral-900: #1A1614;  /* Maximum emphasis */
+
+  /* ----- Semantic Colors ----- */
+  --color-positive: #2E7D4F;
+  --color-positive-bg: #E8F5E9;
+  --color-negative: #C0392B;
+  --color-negative-bg: #FDEDED;
+  --color-warning: #E67E22;
+  --color-warning-bg: #FFF3E0;
+  --color-info: #0077B6;
+  --color-info-bg: #E3F2FD;
+
+  /* ----- Renter / Owner Track Colors (Screen 6) ----- */
+  --color-renter-accent: #D4845A;
+  --color-renter-bg: #FDF5EF;
+  --color-owner-accent: #5B8DB8;
+  --color-owner-bg: #EFF5FA;
+
+  /* ========================
+     SPACING (8px grid)
+     ======================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ========================
+     LAYOUT WIDTHS
+     ======================== */
+  --width-content: 720px;
+  --width-chart: 960px;
+  --width-full: 1200px;
+  --width-sidebar: 300px;
+
+  /* ========================
+     BORDER RADIUS
+     ======================== */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-full: 9999px;
+
+  /* ========================
+     SHADOWS
+     ======================== */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --shadow-tooltip: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* ========================
+     ANIMATION / TRANSITIONS
+     ======================== */
+  --transition-duration-enter: 300ms;
+  --transition-duration-update: 500ms;
+  --transition-duration-exit: 200ms;
+  --transition-duration-micro: 150ms;
+  --transition-duration-hero: 800ms;
+
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);         /* Standard */
+  --transition-easing-enter: cubic-bezier(0.0, 0, 0.2, 1);   /* Deceleration */
+  --transition-easing-exit: cubic-bezier(0.4, 0, 1, 1);      /* Acceleration */
+
+  --transition-stagger-delay: 30ms;
+
+  /* ========================
+     CHART DEFAULTS
+     ======================== */
+  --chart-axis-color: var(--color-neutral-300);
+  --chart-grid-color: var(--color-neutral-200);
+  --chart-label-color: var(--color-neutral-500);
+  --chart-title-color: var(--color-neutral-800);
+  --chart-bar-radius: var(--radius-sm);
+  --chart-dot-radius: 5px;
+  --chart-dot-radius-highlight: 8px;
+  --chart-line-width: 2px;
+  --chart-line-width-highlight: 3px;
+  --chart-area-opacity: 0.3;
+  --chart-you-stroke-width: 3px;
+
+  /* ========================
+     FOCUS RING
+     ======================== */
+  --focus-ring-color: var(--color-you);
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
+
+  /* ========================
+     TOUCH TARGETS
+     ======================== */
+  --touch-target-min: 44px;
+
+  /* ========================
+     Z-INDEX SCALE
+     ======================== */
+  --z-base: 0;
+  --z-chart-overlay: 10;
+  --z-tooltip: 100;
+  --z-sticky-chart: 200;
+  --z-nav: 500;
+  --z-modal: 1000;
+  --z-skip-link: 1100;
+}
+
+/* ========================
+   RESPONSIVE: MOBILE
+   ======================== */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 40px;
+    --font-size-h1: 32px;
+    --font-size-h2: 24px;
+    --font-size-h3: 20px;
+    --font-size-h4: 18px;
+    --font-size-body: 16px;
+    --font-size-body-sm: 14px;
+    --font-size-caption: 12px;
+    --font-size-label: 11px;
+    --font-size-overline: 11px;
+  }
+}
+
+/* ========================
+   REDUCED MOTION
+   ======================== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration-enter: 0.01ms;
+    --transition-duration-update: 0.01ms;
+    --transition-duration-exit: 0.01ms;
+    --transition-duration-micro: 0.01ms;
+    --transition-duration-hero: 0.01ms;
+    --transition-stagger-delay: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================
+   UTILITY: FOCUS VISIBLE
+   ======================== */
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: var(--radius-md);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========================
+   UTILITY: SCREEN READER ONLY
+   ======================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

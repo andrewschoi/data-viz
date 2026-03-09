@@ -1,0 +1,12 @@
+{
+  "total_investor_purchases": 61818,
+  "total_sales": 447201,
+  "investor_purchase_share": 0.1382,
+  "avg_corp_ownership_rate": 0.2529,
+  "max_corp_neighborhood": "South Boston Waterfront",
+  "max_corp_rate": 0.38,
+  "year_range": "2000-2020.0",
+  "corp_ownership_change_2004_2023": 0.1981,
+  "n_neighborhoods": 21,
+  "n_tracts": 803
+}

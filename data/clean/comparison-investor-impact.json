@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Investor Decrease",
+    "price_change_pct": 0.473,
+    "median_price_2020": 400000,
+    "median_income_2020": 59226,
+    "avg_owner_occupancy_pct": 72.2,
+    "n_tracts": 5
+  },
+  {
+    "category": "Stable",
+    "price_change_pct": 0.285,
+    "median_price_2020": 441000,
+    "median_income_2020": 109071,
+    "avg_owner_occupancy_pct": 67.5,
+    "n_tracts": 446
+  },
+  {
+    "category": "Investor Increase",
+    "price_change_pct": 0.375,
+    "median_price_2020": 435000,
+    "median_income_2020": 81603,
+    "avg_owner_occupancy_pct": 69.3,
+    "n_tracts": 140
+  }
+]
