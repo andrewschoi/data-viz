@@ -1,0 +1,178 @@
+{
+  "version": "1.0",
+  "description": "Canonical personalization dimensions for Hello Homeowners. All agents must use these exact labels.",
+  "dimensions": {
+    "income_brackets": {
+      "type": "ordinal",
+      "values": [
+        {
+          "id": "under_35k",
+          "label": "Under $35k",
+          "range": [
+            0,
+            34999
+          ]
+        },
+        {
+          "id": "35k_75k",
+          "label": "$35k-$75k",
+          "range": [
+            35000,
+            74999
+          ]
+        },
+        {
+          "id": "75k_125k",
+          "label": "$75k-$125k",
+          "range": [
+            75000,
+            124999
+          ]
+        },
+        {
+          "id": "125k_200k",
+          "label": "$125k-$200k",
+          "range": [
+            125000,
+            199999
+          ]
+        },
+        {
+          "id": "200k_plus",
+          "label": "$200k+",
+          "range": [
+            200000,
+            null
+          ]
+        }
+      ]
+    },
+    "race_ethnicity": {
+      "type": "categorical",
+      "values": [
+        {
+          "id": "white",
+          "label": "White",
+          "census_field": "nhwhi"
+        },
+        {
+          "id": "black",
+          "label": "Black",
+          "census_field": "nhaa"
+        },
+        {
+          "id": "hispanic_latino",
+          "label": "Hispanic/Latino",
+          "census_field": "lat"
+        },
+        {
+          "id": "asian",
+          "label": "Asian",
+          "census_field": "nhas"
+        },
+        {
+          "id": "other_multi",
+          "label": "Other/Multiracial",
+          "census_fields": [
+            "nhoth",
+            "nhmlt",
+            "nhna",
+            "nhpi"
+          ]
+        }
+      ]
+    },
+    "housing_status": {
+      "type": "binary",
+      "values": [
+        {
+          "id": "renter",
+          "label": "Renter"
+        },
+        {
+          "id": "owner",
+          "label": "Owner/Prospective Buyer"
+        }
+      ]
+    },
+    "neighborhoods": {
+      "type": "categorical",
+      "description": "Boston neighborhoods (primary) and MAPC municipalities (extended)",
+      "boston_neighborhoods": [
+        "Allston",
+        "Beacon Hill",
+        "Brighton",
+        "Charlestown",
+        "Chinatown",
+        "Dorchester",
+        "Downtown",
+        "East Boston",
+        "Fenway",
+        "Hyde Park",
+        "Jamaica Plain",
+        "Longwood",
+        "Mattapan",
+        "North End",
+        "Roslindale",
+        "Roxbury",
+        "South Boston",
+        "South Boston Waterfront",
+        "South End",
+        "West End",
+        "West Roxbury"
+      ],
+      "mapc_municipalities": [
+        "Acton",
+        "Arlington",
+        "Ashland",
+        "Bedford",
+        "Bellingham",
+        "Belmont",
+        "Beverly",
+        "Bolton",
+        "Boston",
+        "Boxborough",
+        "Braintree",
+        "Brookline",
+        "Burlington",
+        "Cambridge",
+        "Canton",
+        "Carlisle",
+        "Chelsea",
+        "Cohasset",
+        "Concord",
+        "Danvers",
+        "Dedham",
+        "Dover",
+        "Duxbury",
+        "Essex",
+        "Everett",
+        "Foxborough",
+        "Framingham",
+        "Franklin",
+        "Gloucester",
+        "Hamilton",
+        "Hanover",
+        "Hingham",
+        "Holbrook",
+        "Holliston",
+        "Hopkinton",
+        "Hudson",
+        "Hull",
+        "Ipswich",
+        "Lexington",
+        "Lincoln",
+        "Littleton",
+        "Lynn",
+        "Lynnfield",
+        "Malden",
+        "Manchester",
+        "Marblehead",
+        "Marlborough",
+        "Marshfield",
+        "Maynard",
+        "Medfield"
+      ]
+    }
+  }
+}

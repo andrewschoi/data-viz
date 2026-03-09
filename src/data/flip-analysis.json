@@ -1,0 +1,209 @@
+[
+  {
+    "year": 2000,
+    "n_flips": 318,
+    "total_sales": 8242,
+    "flip_rate": 0.0386,
+    "median_profit": 45000,
+    "median_profit_pct": 25.54,
+    "median_horizon_days": 98
+  },
+  {
+    "year": 2001,
+    "n_flips": 803,
+    "total_sales": 7281,
+    "flip_rate": 0.1103,
+    "median_profit": 55000,
+    "median_profit_pct": 27.96,
+    "median_horizon_days": 301
+  },
+  {
+    "year": 2002,
+    "n_flips": 1130,
+    "total_sales": 7955,
+    "flip_rate": 0.142,
+    "median_profit": 56500,
+    "median_profit_pct": 23.8,
+    "median_horizon_days": 388
+  },
+  {
+    "year": 2003,
+    "n_flips": 953,
+    "total_sales": 7982,
+    "flip_rate": 0.1194,
+    "median_profit": 49000,
+    "median_profit_pct": 16.63,
+    "median_horizon_days": 416
+  },
+  {
+    "year": 2004,
+    "n_flips": 1216,
+    "total_sales": 10758,
+    "flip_rate": 0.113,
+    "median_profit": 56675,
+    "median_profit_pct": 17.28,
+    "median_horizon_days": 371
+  },
+  {
+    "year": 2005,
+    "n_flips": 1226,
+    "total_sales": 10720,
+    "flip_rate": 0.1144,
+    "median_profit": 57000,
+    "median_profit_pct": 16.34,
+    "median_horizon_days": 378
+  },
+  {
+    "year": 2006,
+    "n_flips": 994,
+    "total_sales": 9571,
+    "flip_rate": 0.1039,
+    "median_profit": 41500,
+    "median_profit_pct": 11.15,
+    "median_horizon_days": 379
+  },
+  {
+    "year": 2007,
+    "n_flips": 869,
+    "total_sales": 9201,
+    "flip_rate": 0.0944,
+    "median_profit": 20000,
+    "median_profit_pct": 5.88,
+    "median_horizon_days": 392
+  },
+  {
+    "year": 2008,
+    "n_flips": 750,
+    "total_sales": 7979,
+    "flip_rate": 0.094,
+    "median_profit": 8964,
+    "median_profit_pct": 2.85,
+    "median_horizon_days": 310
+  },
+  {
+    "year": 2009,
+    "n_flips": 737,
+    "total_sales": 7117,
+    "flip_rate": 0.1036,
+    "median_profit": 10000,
+    "median_profit_pct": 4.11,
+    "median_horizon_days": 283
+  },
+  {
+    "year": 2010,
+    "n_flips": 668,
+    "total_sales": 7161,
+    "flip_rate": 0.0933,
+    "median_profit": 38938,
+    "median_profit_pct": 19.35,
+    "median_horizon_days": 252
+  },
+  {
+    "year": 2011,
+    "n_flips": 558,
+    "total_sales": 6341,
+    "flip_rate": 0.088,
+    "median_profit": 51896,
+    "median_profit_pct": 23.48,
+    "median_horizon_days": 279
+  },
+  {
+    "year": 2012,
+    "n_flips": 613,
+    "total_sales": 7517,
+    "flip_rate": 0.0815,
+    "median_profit": 74500,
+    "median_profit_pct": 30.44,
+    "median_horizon_days": 322
+  },
+  {
+    "year": 2013,
+    "n_flips": 667,
+    "total_sales": 7944,
+    "flip_rate": 0.084,
+    "median_profit": 94600,
+    "median_profit_pct": 26.86,
+    "median_horizon_days": 343
+  },
+  {
+    "year": 2014,
+    "n_flips": 614,
+    "total_sales": 7330,
+    "flip_rate": 0.0838,
+    "median_profit": 102086,
+    "median_profit_pct": 25.95,
+    "median_horizon_days": 376
+  },
+  {
+    "year": 2015,
+    "n_flips": 637,
+    "total_sales": 7621,
+    "flip_rate": 0.0836,
+    "median_profit": 90701,
+    "median_profit_pct": 22.25,
+    "median_horizon_days": 368
+  },
+  {
+    "year": 2016,
+    "n_flips": 680,
+    "total_sales": 7737,
+    "flip_rate": 0.0879,
+    "median_profit": 110000,
+    "median_profit_pct": 24.07,
+    "median_horizon_days": 341
+  },
+  {
+    "year": 2017,
+    "n_flips": 604,
+    "total_sales": 7473,
+    "flip_rate": 0.0808,
+    "median_profit": 125000,
+    "median_profit_pct": 25.02,
+    "median_horizon_days": 356
+  },
+  {
+    "year": 2018,
+    "n_flips": 622,
+    "total_sales": 6858,
+    "flip_rate": 0.0907,
+    "median_profit": 130000,
+    "median_profit_pct": 24.23,
+    "median_horizon_days": 380
+  },
+  {
+    "year": 2019,
+    "n_flips": 546,
+    "total_sales": 6608,
+    "flip_rate": 0.0826,
+    "median_profit": 107575,
+    "median_profit_pct": 19.05,
+    "median_horizon_days": 400
+  },
+  {
+    "year": 2020,
+    "n_flips": 410,
+    "total_sales": 5942,
+    "flip_rate": 0.069,
+    "median_profit": 92800,
+    "median_profit_pct": 16.51,
+    "median_horizon_days": 438
+  },
+  {
+    "year": 2021,
+    "n_flips": 523,
+    "total_sales": 7969,
+    "flip_rate": 0.0656,
+    "median_profit": 115000,
+    "median_profit_pct": 16.32,
+    "median_horizon_days": 438
+  },
+  {
+    "year": 2022,
+    "n_flips": 421,
+    "total_sales": 6613,
+    "flip_rate": 0.0637,
+    "median_profit": 125000,
+    "median_profit_pct": 18.03,
+    "median_horizon_days": 403
+  }
+]

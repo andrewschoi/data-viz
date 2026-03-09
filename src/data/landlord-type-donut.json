@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Non-Investor (Owner-Occupied)",
+    "count": 385364,
+    "share": 0.4309
+  },
+  {
+    "type": "Small Investor",
+    "count": 19161,
+    "share": 0.0214
+  },
+  {
+    "type": "Medium Investor",
+    "count": 14881,
+    "share": 0.0166
+  },
+  {
+    "type": "Large Investor",
+    "count": 9796,
+    "share": 0.011
+  },
+  {
+    "type": "Institutional Investor",
+    "count": 17980,
+    "share": 0.0201
+  }
+]

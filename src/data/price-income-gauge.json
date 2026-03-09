@@ -1,0 +1,37 @@
+[
+  {
+    "income_bracket": "Under $55k",
+    "price_to_income": 7.0,
+    "breakeven_years": 8.4,
+    "median_price": 375000,
+    "median_income": 53692
+  },
+  {
+    "income_bracket": "$55k-$80k",
+    "price_to_income": 4.5,
+    "breakeven_years": 7.0,
+    "median_price": 359475,
+    "median_income": 80974
+  },
+  {
+    "income_bracket": "$80k-$105k",
+    "price_to_income": 4.2,
+    "breakeven_years": 6.6,
+    "median_price": 424750,
+    "median_income": 104176
+  },
+  {
+    "income_bracket": "$105k-$130k",
+    "price_to_income": 3.9,
+    "breakeven_years": 6.7,
+    "median_price": 487500,
+    "median_income": 127519
+  },
+  {
+    "income_bracket": "$130k+",
+    "price_to_income": 3.8,
+    "breakeven_years": 7.5,
+    "median_price": 699000,
+    "median_income": 168125
+  }
+]

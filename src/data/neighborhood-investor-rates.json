@@ -1,0 +1,170 @@
+[
+  {
+    "Neighborhood": "Allston",
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.22,
+    "inst_rate": 0.0873,
+    "large_rate": 0.207,
+    "small_rate": 0.093
+  },
+  {
+    "Neighborhood": "Beacon Hill",
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.29,
+    "inst_rate": 0.0873,
+    "large_rate": 0.207,
+    "small_rate": 0.093
+  },
+  {
+    "Neighborhood": "Brighton",
+    "corp_own_rate": 0.23,
+    "own_occ_rate": 0.32,
+    "inst_rate": 0.0669,
+    "large_rate": 0.1587,
+    "small_rate": 0.0713
+  },
+  {
+    "Neighborhood": "Downtown",
+    "corp_own_rate": 0.34,
+    "own_occ_rate": 0.3,
+    "inst_rate": 0.0989,
+    "large_rate": 0.2346,
+    "small_rate": 0.1054
+  },
+  {
+    "Neighborhood": "Charlestown",
+    "corp_own_rate": 0.28,
+    "own_occ_rate": 0.49,
+    "inst_rate": 0.0814,
+    "large_rate": 0.1932,
+    "small_rate": 0.0868
+  },
+  {
+    "Neighborhood": "Chinatown",
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.28,
+    "inst_rate": 0.0873,
+    "large_rate": 0.207,
+    "small_rate": 0.093
+  },
+  {
+    "Neighborhood": "Dorchester",
+    "corp_own_rate": 0.19,
+    "own_occ_rate": 0.48,
+    "inst_rate": 0.0553,
+    "large_rate": 0.1311,
+    "small_rate": 0.0589
+  },
+  {
+    "Neighborhood": "East Boston",
+    "corp_own_rate": 0.3,
+    "own_occ_rate": 0.41,
+    "inst_rate": 0.0873,
+    "large_rate": 0.207,
+    "small_rate": 0.093
+  },
+  {
+    "Neighborhood": "Fenway",
+    "corp_own_rate": 0.36,
+    "own_occ_rate": 0.16,
+    "inst_rate": 0.1047,
+    "large_rate": 0.2484,
+    "small_rate": 0.1116
+  },
+  {
+    "Neighborhood": "Hyde Park",
+    "corp_own_rate": 0.12,
+    "own_occ_rate": 0.63,
+    "inst_rate": 0.0349,
+    "large_rate": 0.0828,
+    "small_rate": 0.0372
+  },
+  {
+    "Neighborhood": "Jamaica Plain",
+    "corp_own_rate": 0.17,
+    "own_occ_rate": 0.52,
+    "inst_rate": 0.0494,
+    "large_rate": 0.1173,
+    "small_rate": 0.0527
+  },
+  {
+    "Neighborhood": "Longwood",
+    "corp_own_rate": 0.34,
+    "own_occ_rate": 0.18,
+    "inst_rate": 0.0989,
+    "large_rate": 0.2346,
+    "small_rate": 0.1054
+  },
+  {
+    "Neighborhood": "Mattapan",
+    "corp_own_rate": 0.14,
+    "own_occ_rate": 0.55,
+    "inst_rate": 0.0407,
+    "large_rate": 0.0966,
+    "small_rate": 0.0434
+  },
+  {
+    "Neighborhood": "North End",
+    "corp_own_rate": 0.29,
+    "own_occ_rate": 0.25,
+    "inst_rate": 0.0843,
+    "large_rate": 0.2001,
+    "small_rate": 0.0899
+  },
+  {
+    "Neighborhood": "Roslindale",
+    "corp_own_rate": 0.14,
+    "own_occ_rate": 0.63,
+    "inst_rate": 0.0407,
+    "large_rate": 0.0966,
+    "small_rate": 0.0434
+  },
+  {
+    "Neighborhood": "Roxbury",
+    "corp_own_rate": 0.25,
+    "own_occ_rate": 0.32,
+    "inst_rate": 0.0727,
+    "large_rate": 0.1725,
+    "small_rate": 0.0775
+  },
+  {
+    "Neighborhood": "South Boston",
+    "corp_own_rate": 0.22,
+    "own_occ_rate": 0.38,
+    "inst_rate": 0.064,
+    "large_rate": 0.1518,
+    "small_rate": 0.0682
+  },
+  {
+    "Neighborhood": "South Boston Waterfront",
+    "corp_own_rate": 0.38,
+    "own_occ_rate": 0.29,
+    "inst_rate": 0.1105,
+    "large_rate": 0.2622,
+    "small_rate": 0.1178
+  },
+  {
+    "Neighborhood": "South End",
+    "corp_own_rate": 0.25,
+    "own_occ_rate": 0.36,
+    "inst_rate": 0.0727,
+    "large_rate": 0.1725,
+    "small_rate": 0.0775
+  },
+  {
+    "Neighborhood": "West End",
+    "corp_own_rate": 0.28,
+    "own_occ_rate": 0.27,
+    "inst_rate": 0.0814,
+    "large_rate": 0.1932,
+    "small_rate": 0.0868
+  },
+  {
+    "Neighborhood": "West Roxbury",
+    "corp_own_rate": 0.13,
+    "own_occ_rate": 0.66,
+    "inst_rate": 0.0378,
+    "large_rate": 0.0897,
+    "small_rate": 0.0403
+  }
+]

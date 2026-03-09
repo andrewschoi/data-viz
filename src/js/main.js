@@ -19,7 +19,7 @@ import * as investorCompetition from './charts/investor-competition.js';
 import * as comparison from './charts/comparison.js';
 import * as policyCards from './charts/policy-cards.js';
 
-const DATA_BASE = '../../data/clean';
+const DATA_BASE = './data';
 
 // Track which sections have been loaded
 const loaded = new Set();

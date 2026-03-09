@@ -1,0 +1,191 @@
+[
+  {
+    "neighborhood": "South Boston Waterfront",
+    "corp_rate_early": 0.06,
+    "corp_rate_late": 0.38,
+    "corp_change": 0.32,
+    "owner_occ_early": 0.24,
+    "owner_occ_late": 0.29,
+    "occ_change": 0.05
+  },
+  {
+    "neighborhood": "East Boston",
+    "corp_rate_early": 0.03,
+    "corp_rate_late": 0.3,
+    "corp_change": 0.27,
+    "owner_occ_early": 0.47,
+    "owner_occ_late": 0.41,
+    "occ_change": -0.06
+  },
+  {
+    "neighborhood": "Fenway",
+    "corp_rate_early": 0.09,
+    "corp_rate_late": 0.36,
+    "corp_change": 0.27,
+    "owner_occ_early": 0.23,
+    "owner_occ_late": 0.16,
+    "occ_change": -0.07
+  },
+  {
+    "neighborhood": "Charlestown",
+    "corp_rate_early": 0.03,
+    "corp_rate_late": 0.28,
+    "corp_change": 0.25,
+    "owner_occ_early": 0.54,
+    "owner_occ_late": 0.49,
+    "occ_change": -0.05
+  },
+  {
+    "neighborhood": "Beacon Hill",
+    "corp_rate_early": 0.05,
+    "corp_rate_late": 0.3,
+    "corp_change": 0.25,
+    "owner_occ_early": 0.34,
+    "owner_occ_late": 0.29,
+    "occ_change": -0.05
+  },
+  {
+    "neighborhood": "Longwood",
+    "corp_rate_early": 0.09,
+    "corp_rate_late": 0.34,
+    "corp_change": 0.25,
+    "owner_occ_early": 0.3,
+    "owner_occ_late": 0.18,
+    "occ_change": -0.12
+  },
+  {
+    "neighborhood": "West End",
+    "corp_rate_early": 0.05,
+    "corp_rate_late": 0.28,
+    "corp_change": 0.23,
+    "owner_occ_early": 0.43,
+    "owner_occ_late": 0.27,
+    "occ_change": -0.16
+  },
+  {
+    "neighborhood": "Allston",
+    "corp_rate_early": 0.07,
+    "corp_rate_late": 0.3,
+    "corp_change": 0.23,
+    "owner_occ_early": 0.29,
+    "owner_occ_late": 0.22,
+    "occ_change": -0.07
+  },
+  {
+    "neighborhood": "Downtown",
+    "corp_rate_early": 0.13,
+    "corp_rate_late": 0.34,
+    "corp_change": 0.21,
+    "owner_occ_early": 0.36,
+    "owner_occ_late": 0.3,
+    "occ_change": -0.06
+  },
+  {
+    "neighborhood": "North End",
+    "corp_rate_early": 0.08,
+    "corp_rate_late": 0.29,
+    "corp_change": 0.21,
+    "owner_occ_early": 0.36,
+    "owner_occ_late": 0.25,
+    "occ_change": -0.11
+  },
+  {
+    "neighborhood": "Brighton",
+    "corp_rate_early": 0.04,
+    "corp_rate_late": 0.23,
+    "corp_change": 0.19,
+    "owner_occ_early": 0.44,
+    "owner_occ_late": 0.32,
+    "occ_change": -0.12
+  },
+  {
+    "neighborhood": "South End",
+    "corp_rate_early": 0.06,
+    "corp_rate_late": 0.25,
+    "corp_change": 0.19,
+    "owner_occ_early": 0.46,
+    "owner_occ_late": 0.36,
+    "occ_change": -0.1
+  },
+  {
+    "neighborhood": "Roxbury",
+    "corp_rate_early": 0.07,
+    "corp_rate_late": 0.25,
+    "corp_change": 0.18,
+    "owner_occ_early": 0.3,
+    "owner_occ_late": 0.32,
+    "occ_change": 0.02
+  },
+  {
+    "neighborhood": "South Boston",
+    "corp_rate_early": 0.04,
+    "corp_rate_late": 0.22,
+    "corp_change": 0.18,
+    "owner_occ_early": 0.5,
+    "owner_occ_late": 0.38,
+    "occ_change": -0.12
+  },
+  {
+    "neighborhood": "Chinatown",
+    "corp_rate_early": 0.13,
+    "corp_rate_late": 0.3,
+    "corp_change": 0.17,
+    "owner_occ_early": 0.27,
+    "owner_occ_late": 0.28,
+    "occ_change": 0.01
+  },
+  {
+    "neighborhood": "Jamaica Plain",
+    "corp_rate_early": 0.02,
+    "corp_rate_late": 0.17,
+    "corp_change": 0.15,
+    "owner_occ_early": 0.56,
+    "owner_occ_late": 0.52,
+    "occ_change": -0.04
+  },
+  {
+    "neighborhood": "Dorchester",
+    "corp_rate_early": 0.04,
+    "corp_rate_late": 0.19,
+    "corp_change": 0.15,
+    "owner_occ_early": 0.5,
+    "owner_occ_late": 0.48,
+    "occ_change": -0.02
+  },
+  {
+    "neighborhood": "Roslindale",
+    "corp_rate_early": 0.02,
+    "corp_rate_late": 0.14,
+    "corp_change": 0.12,
+    "owner_occ_early": 0.68,
+    "owner_occ_late": 0.63,
+    "occ_change": -0.05
+  },
+  {
+    "neighborhood": "Mattapan",
+    "corp_rate_early": 0.02,
+    "corp_rate_late": 0.14,
+    "corp_change": 0.12,
+    "owner_occ_early": 0.57,
+    "owner_occ_late": 0.55,
+    "occ_change": -0.02
+  },
+  {
+    "neighborhood": "West Roxbury",
+    "corp_rate_early": 0.01,
+    "corp_rate_late": 0.13,
+    "corp_change": 0.12,
+    "owner_occ_early": 0.67,
+    "owner_occ_late": 0.66,
+    "occ_change": -0.01
+  },
+  {
+    "neighborhood": "Hyde Park",
+    "corp_rate_early": 0.02,
+    "corp_rate_late": 0.12,
+    "corp_change": 0.1,
+    "owner_occ_early": 0.64,
+    "owner_occ_late": 0.63,
+    "occ_change": -0.01
+  }
+]

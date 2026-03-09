@@ -18,7 +18,7 @@ const listeners = [];
 
 /** Load personalization schema from data file */
 export async function loadSchema() {
-  const res = await fetch('../../data/clean/personalization-schema.json');
+  const res = await fetch('./data/personalization-schema.json');
   schema = await res.json();
   return schema;
 }
