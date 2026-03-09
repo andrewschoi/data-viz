@@ -60,16 +60,7 @@ export function populateForm() {
   });
   neighborhoodSelect.appendChild(bostonGroup);
 
-  // MAPC municipalities
-  const mapcGroup = document.createElement('optgroup');
-  mapcGroup.label = 'Metro Boston Municipalities';
-  schema.dimensions.neighborhoods.mapc_municipalities.forEach(n => {
-    const opt = document.createElement('option');
-    opt.value = n;
-    opt.textContent = n;
-    mapcGroup.appendChild(opt);
-  });
-  neighborhoodSelect.appendChild(mapcGroup);
+  // MAPC municipalities excluded — chart data only covers Boston neighborhoods
 }
 
 /** Read state from URL query parameters */

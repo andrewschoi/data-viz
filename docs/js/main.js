@@ -70,6 +70,25 @@ async function init() {
   // Initialize scroll controller
   scroll.initScrolly();
   scroll.initSectionObserver(handleSectionEnter);
+
+  // Screen 5: toggle between the two charts based on scroll step
+  function showBarsChart() {
+    const bars = document.getElementById('demographic-bars-container');
+    const dots = document.getElementById('eviction-dots-container');
+    if (bars) bars.classList.remove('is-hidden');
+    if (dots) dots.classList.remove('is-visible');
+  }
+  function showDotsChart() {
+    const bars = document.getElementById('demographic-bars-container');
+    const dots = document.getElementById('eviction-dots-container');
+    if (bars) bars.classList.add('is-hidden');
+    if (dots) dots.classList.add('is-visible');
+  }
+
+  scroll.onStep('hurt-intro', showBarsChart);
+  scroll.onStep('hurt-bars', showBarsChart);
+  scroll.onStep('hurt-dots', showDotsChart);
+  scroll.onStep('hurt-you', showDotsChart);
 }
 
 /** Bind form submission */

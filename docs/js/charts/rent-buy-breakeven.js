@@ -71,7 +71,7 @@ function redraw(el, price, income) {
 
 function drawChart(el, homePrice, annualIncome) {
   const width = el.clientWidth || 800;
-  const height = Math.round(width * 0.45);
+  const height = Math.round(width * 0.55);
   const margin = { top: 40, right: 30, bottom: 50, left: 70 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;

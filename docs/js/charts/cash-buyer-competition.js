@@ -14,7 +14,7 @@ export function create(container, data, options = {}) {
   if (!el) return;
 
   const width = el.clientWidth || 800;
-  const height = Math.round(width * 0.45);
+  const height = Math.round(width * 0.55);
   const margin = { top: 55, right: 150, bottom: 50, left: 60 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;

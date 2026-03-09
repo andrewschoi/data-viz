@@ -462,7 +462,7 @@ h4 {
   position: sticky;
   top: 80px;
   max-height: calc(100vh - 100px);
-  overflow-y: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -506,6 +506,17 @@ h4 {
   width: 100%;
   padding: var(--space-4);
   position: relative;
+}
+
+/* Screen 5: only show one chart at a time */
+#eviction-dots-container {
+  display: none;
+}
+#eviction-dots-container.is-visible {
+  display: block;
+}
+#demographic-bars-container.is-hidden {
+  display: none;
 }
 
 .chart-container svg {
